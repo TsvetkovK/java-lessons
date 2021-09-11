@@ -5,9 +5,9 @@ public class Final {
 }
 
 class Test{
-    public static final int CONST;
+    public static final int CONST = 0;
 
     public Test(int CONST){
-        this.CONST = CONST;
+        //this.CONST = CONST;
     }
 }
