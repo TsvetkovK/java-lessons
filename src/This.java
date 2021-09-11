@@ -1,12 +1,19 @@
 public class This {
     public static void main(String[] args) {
-        Human human1 = new Human();
+
+        Human human1 = new Human("BOB", 20);
+        Human human2 = new Human("TOM", 30);
+        Human.desc = "OOOOhhh my";
+        human1.getAllFields();
+        human2.getAllFields();
     }
 }
 
 class Human{
     private String name;
     private int age;
+
+    public static String desc;
 
 
 
@@ -23,6 +30,10 @@ class Human{
         System.out.println("Привет из 3 конструктора");
         this.name = name;
         this.age = age;
+    }
+
+    public static String getDesc(){
+        return desc;
     }
 
     public void setName(String name){
@@ -43,5 +54,9 @@ class Human{
 
     public void getInfo(){
         System.out.println(name + " " + age);
+    }
+
+    public void getAllFields(){
+        System.out.println(name + " " + age + " " + desc);
     }
 }
