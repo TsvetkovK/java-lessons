@@ -2,10 +2,7 @@ public class This {
     public static void main(String[] args) {
 
         Human human1 = new Human("BOB", 20);
-        Human human2 = new Human("TOM", 30);
-        Human.desc = "OOOOhhh my";
-        human1.getAllFields();
-        human2.getAllFields();
+        System.out.println(human1.toString());
     }
 }
 
@@ -15,7 +12,9 @@ class Human{
 
     public static String desc;
 
-
+    public String toString(){
+        return name + ", " + age;
+    }
 
     public Human(String name){
         System.out.println("Привет из первого конструктора");
